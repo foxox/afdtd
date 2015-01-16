@@ -1,0 +1,17 @@
+#version 330 core
+
+// Ouput data
+//layout(location = 0) out vec4 fragmentcolor;
+out vec4 fragmentcolor;
+
+in vec2 vertuv;
+
+uniform sampler2D tex;
+
+void main()
+{
+	// Output color = red 
+	//fragmentcolor = vec4(1.0, 1.0, 0.0, 1.0);
+	fragmentcolor = texture( tex, vertuv );
+	
+}

@@ -1,0 +1,20 @@
+#version 330 core
+
+// Ouput data
+layout(location = 0) out vec4 fragmentcolor;
+//out vec4 fragmentcolor;
+
+in vec3 normal;
+in vec2 uv;
+in vec3 color;
+
+uniform sampler2D tex;
+
+void main()
+{
+	vec4 texcol = texture( tex, uv );
+	fragmentcolor = vec4(color * vec3(texcol.x, texcol.y, texcol.z), 1);
+		
+	//fragmentcolor = texture( tex, uv );
+	//fragmentcolor = vec4(color, 1);
+}

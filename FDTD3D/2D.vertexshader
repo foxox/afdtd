@@ -1,0 +1,21 @@
+#version 330 core
+
+// Input vertex data, different for all executions of this shader.
+layout(location = 0) in vec4 vertexInfo;
+
+out vec2 vertuv;
+
+void main()
+{
+	vec4 vertpos = vec4(vertexInfo.x, vertexInfo.y, 0, 1) ;
+	vertuv = vec2(vertexInfo.z, vertexInfo.w);
+
+	mat4 transform =
+		mat4(	2,0,0,0,
+				0,2,0,0,
+				0,0,1,0,
+				-1,-1,0,1	);
+
+    gl_Position = transform * vertpos;
+    //gl_Position.w = 1.0f;
+}

@@ -1,0 +1,165 @@
+/op:setresultlog 1_results.csv
+replace ENVIRONMENT /STEREO:0 /inputduration:10.0 /deltaTime:0.1 /plotinterval:1000 /realtimeplotinterval:1.0 /MOVIEMODE:0 /zoomfactor:2 /AUTORUN:1 /PML_OBSTACLE_STRETCH:1 /m:4.0 /R0:0.001 /na:10 /c:340.0 /Cmax:1.0 /ax:1.0 /n2:1.0 /epsilon0:1.0
+replace MAP_NEWELLSIMON5CM /obstheightmapfile:"0_MAP_newellsimon5cm_7m.bmp"
+replace MAP_BLANK /obstheightmapfile:"0_MAP_blank.bmp"
+replace MAP_SPLIT_CENTER /obstheightmapfile:"0_MAP_boxsplit_center.bmp"
+replace MAP_SPLIT_OFFSET /obstheightmapfile:"0_MAP_boxsplit_offset.bmp"
+replace MAP_SPLIT_2OFFSET /obstheightmapfile:"0_MAP_boxsplit_2offset.bmp"
+replace MAP_HALFWALL /obstheightmapfile:"0_MAP_halfwall.bmp"
+
+replace SOUND_IMPULSE /soundfile:"0_IMPULSE.wav"
+replace DAFXIMPULSECOMMON /op:sim SOUND_IMPULSE ENVIRONMENT
+replace 1ECONFIG1.0 /ABSOLUTE_LIMIT:0 /ABSOLUTE_NUMBER:0 /WAVEVOLUME_LIMIT:1 /WAVEVOLUME_LIMIT_FACTOR:1.0
+replace DAFXKBEST1.0 /integrator:1E_KBEST 1ECONFIG1.0
+replace DAFXFDTD /integrator:FDTD
+/op:pulsegen  //0_IMPULSE.wav is default name
+/op:print
+/op:print Simulation 1/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:1 /sourcey:1.5 /sourcez:0.5 /micx:1 /micy:0.5 /micz:0.5 /xDim:2 /yDim:2 /zDim:1 /duration:0.00882353 /maxfreq:200
+/op:print
+/op:print Simulation 2/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:1 /sourcey:1.5 /sourcez:0.5 /micx:1 /micy:0.5 /micz:0.5 /xDim:2 /yDim:2 /zDim:1 /duration:0.00882353 /maxfreq:200
+/op:print
+/op:print Simulation 3/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:1 /sourcey:1.5 /sourcez:0.5 /micx:1 /micy:0.5 /micz:0.5 /xDim:2 /yDim:2 /zDim:1 /duration:0.00882353 /maxfreq:400
+/op:print
+/op:print Simulation 4/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:1 /sourcey:1.5 /sourcez:0.5 /micx:1 /micy:0.5 /micz:0.5 /xDim:2 /yDim:2 /zDim:1 /duration:0.00882353 /maxfreq:400
+/op:print
+/op:print Simulation 5/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:1 /sourcey:1.5 /sourcez:0.5 /micx:1 /micy:0.5 /micz:0.5 /xDim:2 /yDim:2 /zDim:1 /duration:0.00882353 /maxfreq:600
+/op:print
+/op:print Simulation 6/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:1 /sourcey:1.5 /sourcez:0.5 /micx:1 /micy:0.5 /micz:0.5 /xDim:2 /yDim:2 /zDim:1 /duration:0.00882353 /maxfreq:600
+/op:print
+/op:print Simulation 7/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:1 /sourcey:1.5 /sourcez:0.5 /micx:1 /micy:0.5 /micz:0.5 /xDim:2 /yDim:2 /zDim:1 /duration:0.00882353 /maxfreq:800
+/op:print
+/op:print Simulation 8/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:1 /sourcey:1.5 /sourcez:0.5 /micx:1 /micy:0.5 /micz:0.5 /xDim:2 /yDim:2 /zDim:1 /duration:0.00882353 /maxfreq:800
+/op:print
+/op:print Simulation 9/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:1 /sourcey:1.5 /sourcez:0.5 /micx:1 /micy:0.5 /micz:0.5 /xDim:2 /yDim:2 /zDim:1 /duration:0.00882353 /maxfreq:1000
+/op:print
+/op:print Simulation 10/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:1 /sourcey:1.5 /sourcez:0.5 /micx:1 /micy:0.5 /micz:0.5 /xDim:2 /yDim:2 /zDim:1 /duration:0.00882353 /maxfreq:1000
+/op:print
+/op:print Simulation 11/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:6 /sourcey:9 /sourcez:3 /micx:6 /micy:3 /micz:3 /xDim:12 /yDim:12 /zDim:6 /duration:0.0529412 /maxfreq:200
+/op:print
+/op:print Simulation 12/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:6 /sourcey:9 /sourcez:3 /micx:6 /micy:3 /micz:3 /xDim:12 /yDim:12 /zDim:6 /duration:0.0529412 /maxfreq:200
+/op:print
+/op:print Simulation 13/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:6 /sourcey:9 /sourcez:3 /micx:6 /micy:3 /micz:3 /xDim:12 /yDim:12 /zDim:6 /duration:0.0529412 /maxfreq:400
+/op:print
+/op:print Simulation 14/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:6 /sourcey:9 /sourcez:3 /micx:6 /micy:3 /micz:3 /xDim:12 /yDim:12 /zDim:6 /duration:0.0529412 /maxfreq:400
+/op:print
+/op:print Simulation 15/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:6 /sourcey:9 /sourcez:3 /micx:6 /micy:3 /micz:3 /xDim:12 /yDim:12 /zDim:6 /duration:0.0529412 /maxfreq:600
+/op:print
+/op:print Simulation 16/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:6 /sourcey:9 /sourcez:3 /micx:6 /micy:3 /micz:3 /xDim:12 /yDim:12 /zDim:6 /duration:0.0529412 /maxfreq:600
+/op:print
+/op:print Simulation 17/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:6 /sourcey:9 /sourcez:3 /micx:6 /micy:3 /micz:3 /xDim:12 /yDim:12 /zDim:6 /duration:0.0529412 /maxfreq:800
+/op:print
+/op:print Simulation 18/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:6 /sourcey:9 /sourcez:3 /micx:6 /micy:3 /micz:3 /xDim:12 /yDim:12 /zDim:6 /duration:0.0529412 /maxfreq:800
+/op:print
+/op:print Simulation 19/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:6 /sourcey:9 /sourcez:3 /micx:6 /micy:3 /micz:3 /xDim:12 /yDim:12 /zDim:6 /duration:0.0529412 /maxfreq:1000
+/op:print
+/op:print Simulation 20/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:6 /sourcey:9 /sourcez:3 /micx:6 /micy:3 /micz:3 /xDim:12 /yDim:12 /zDim:6 /duration:0.0529412 /maxfreq:1000
+/op:print
+/op:print Simulation 21/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:11 /sourcey:16.5 /sourcez:5.5 /micx:11 /micy:5.5 /micz:5.5 /xDim:22 /yDim:22 /zDim:11 /duration:0.0970588 /maxfreq:200
+/op:print
+/op:print Simulation 22/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:11 /sourcey:16.5 /sourcez:5.5 /micx:11 /micy:5.5 /micz:5.5 /xDim:22 /yDim:22 /zDim:11 /duration:0.0970588 /maxfreq:200
+/op:print
+/op:print Simulation 23/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:11 /sourcey:16.5 /sourcez:5.5 /micx:11 /micy:5.5 /micz:5.5 /xDim:22 /yDim:22 /zDim:11 /duration:0.0970588 /maxfreq:400
+/op:print
+/op:print Simulation 24/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:11 /sourcey:16.5 /sourcez:5.5 /micx:11 /micy:5.5 /micz:5.5 /xDim:22 /yDim:22 /zDim:11 /duration:0.0970588 /maxfreq:400
+/op:print
+/op:print Simulation 25/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:11 /sourcey:16.5 /sourcez:5.5 /micx:11 /micy:5.5 /micz:5.5 /xDim:22 /yDim:22 /zDim:11 /duration:0.0970588 /maxfreq:600
+/op:print
+/op:print Simulation 26/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:11 /sourcey:16.5 /sourcez:5.5 /micx:11 /micy:5.5 /micz:5.5 /xDim:22 /yDim:22 /zDim:11 /duration:0.0970588 /maxfreq:600
+/op:print
+/op:print Simulation 27/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:11 /sourcey:16.5 /sourcez:5.5 /micx:11 /micy:5.5 /micz:5.5 /xDim:22 /yDim:22 /zDim:11 /duration:0.0970588 /maxfreq:800
+/op:print
+/op:print Simulation 28/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:11 /sourcey:16.5 /sourcez:5.5 /micx:11 /micy:5.5 /micz:5.5 /xDim:22 /yDim:22 /zDim:11 /duration:0.0970588 /maxfreq:800
+/op:print
+/op:print Simulation 29/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:11 /sourcey:16.5 /sourcez:5.5 /micx:11 /micy:5.5 /micz:5.5 /xDim:22 /yDim:22 /zDim:11 /duration:0.0970588 /maxfreq:1000
+/op:print
+/op:print Simulation 30/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:11 /sourcey:16.5 /sourcez:5.5 /micx:11 /micy:5.5 /micz:5.5 /xDim:22 /yDim:22 /zDim:11 /duration:0.0970588 /maxfreq:1000
+/op:print
+/op:print Simulation 31/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:16 /sourcey:24 /sourcez:8 /micx:16 /micy:8 /micz:8 /xDim:32 /yDim:32 /zDim:16 /duration:0.141176 /maxfreq:200
+/op:print
+/op:print Simulation 32/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:16 /sourcey:24 /sourcez:8 /micx:16 /micy:8 /micz:8 /xDim:32 /yDim:32 /zDim:16 /duration:0.141176 /maxfreq:200
+/op:print
+/op:print Simulation 33/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:16 /sourcey:24 /sourcez:8 /micx:16 /micy:8 /micz:8 /xDim:32 /yDim:32 /zDim:16 /duration:0.141176 /maxfreq:400
+/op:print
+/op:print Simulation 34/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:16 /sourcey:24 /sourcez:8 /micx:16 /micy:8 /micz:8 /xDim:32 /yDim:32 /zDim:16 /duration:0.141176 /maxfreq:400
+/op:print
+/op:print Simulation 35/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:16 /sourcey:24 /sourcez:8 /micx:16 /micy:8 /micz:8 /xDim:32 /yDim:32 /zDim:16 /duration:0.141176 /maxfreq:600
+/op:print
+/op:print Simulation 36/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:16 /sourcey:24 /sourcez:8 /micx:16 /micy:8 /micz:8 /xDim:32 /yDim:32 /zDim:16 /duration:0.141176 /maxfreq:600
+/op:print
+/op:print Simulation 37/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:16 /sourcey:24 /sourcez:8 /micx:16 /micy:8 /micz:8 /xDim:32 /yDim:32 /zDim:16 /duration:0.141176 /maxfreq:800
+/op:print
+/op:print Simulation 38/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:16 /sourcey:24 /sourcez:8 /micx:16 /micy:8 /micz:8 /xDim:32 /yDim:32 /zDim:16 /duration:0.141176 /maxfreq:800
+/op:print
+/op:print Simulation 39/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:16 /sourcey:24 /sourcez:8 /micx:16 /micy:8 /micz:8 /xDim:32 /yDim:32 /zDim:16 /duration:0.141176 /maxfreq:1000
+/op:print
+/op:print Simulation 40/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:16 /sourcey:24 /sourcez:8 /micx:16 /micy:8 /micz:8 /xDim:32 /yDim:32 /zDim:16 /duration:0.141176 /maxfreq:1000
+/op:print
+/op:print Simulation 41/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:21 /sourcey:31.5 /sourcez:10.5 /micx:21 /micy:10.5 /micz:10.5 /xDim:42 /yDim:42 /zDim:21 /duration:0.185294 /maxfreq:200
+/op:print
+/op:print Simulation 42/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:21 /sourcey:31.5 /sourcez:10.5 /micx:21 /micy:10.5 /micz:10.5 /xDim:42 /yDim:42 /zDim:21 /duration:0.185294 /maxfreq:200
+/op:print
+/op:print Simulation 43/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:21 /sourcey:31.5 /sourcez:10.5 /micx:21 /micy:10.5 /micz:10.5 /xDim:42 /yDim:42 /zDim:21 /duration:0.185294 /maxfreq:400
+/op:print
+/op:print Simulation 44/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:21 /sourcey:31.5 /sourcez:10.5 /micx:21 /micy:10.5 /micz:10.5 /xDim:42 /yDim:42 /zDim:21 /duration:0.185294 /maxfreq:400
+/op:print
+/op:print Simulation 45/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:21 /sourcey:31.5 /sourcez:10.5 /micx:21 /micy:10.5 /micz:10.5 /xDim:42 /yDim:42 /zDim:21 /duration:0.185294 /maxfreq:600
+/op:print
+/op:print Simulation 46/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:21 /sourcey:31.5 /sourcez:10.5 /micx:21 /micy:10.5 /micz:10.5 /xDim:42 /yDim:42 /zDim:21 /duration:0.185294 /maxfreq:600
+/op:print
+/op:print Simulation 47/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:21 /sourcey:31.5 /sourcez:10.5 /micx:21 /micy:10.5 /micz:10.5 /xDim:42 /yDim:42 /zDim:21 /duration:0.185294 /maxfreq:800
+/op:print
+/op:print Simulation 48/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:21 /sourcey:31.5 /sourcez:10.5 /micx:21 /micy:10.5 /micz:10.5 /xDim:42 /yDim:42 /zDim:21 /duration:0.185294 /maxfreq:800
+/op:print
+/op:print Simulation 49/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXFDTD /sourcex:21 /sourcey:31.5 /sourcez:10.5 /micx:21 /micy:10.5 /micz:10.5 /xDim:42 /yDim:42 /zDim:21 /duration:0.185294 /maxfreq:1000
+/op:print
+/op:print Simulation 50/50
+DAFXIMPULSECOMMON MAP_BLANK /outputfile:"deleteme.wav" DAFXKBEST1.0 /sourcex:21 /sourcey:31.5 /sourcez:10.5 /micx:21 /micy:10.5 /micz:10.5 /xDim:42 /yDim:42 /zDim:21 /duration:0.185294 /maxfreq:1000

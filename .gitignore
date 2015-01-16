@@ -1,3 +1,20 @@
+/x64/
+
+/FDTD1D/x64
+/FDTD2D/x64
+/FDTD3D/Win32
+/FDTD3D/objTester
+/ImageIO/x64
+/ImageIO/Win32
+
+*.dep
+*.csv
+dev.zip 
+*.wav
+*.res
+*.manifest
+
+
 # Compiled Object files
 *.slo
 *.lo
@@ -26,3 +43,6 @@
 *.exe
 *.out
 *.app
+*.htm
+/FDTD1D/x64/Release/*.idb
+*.idb
